@@ -17,6 +17,17 @@ With the SNAPCARD WordPress Bitcoin payments button, users can accept payments i
 
 # Configuration
 
+## 1. Go to settings and click on the SNAPCARD Widget.
+![Step 1](http://bookmarklet.snapcard.io/img/steps/step1.png)
+
+## 2. 
+![Step 2](http://bookmarklet.snapcard.io/img/steps/step2.png)
+
+## 3.
+![Step 3](http://bookmarklet.snapcard.io/img/steps/step3.png)
+
+##4. 
+![Step 4](http://bookmarklet.snapcard.io/img/steps/step4.png)
 
 # SNAPCARD Support 
 
