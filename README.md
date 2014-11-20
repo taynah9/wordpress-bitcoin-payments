@@ -17,10 +17,11 @@ With the SNAPCARD WordPress Bitcoin payments button, users can accept payments i
 
 # Configuration
 
-## 1. After you have installed the SNAPCARD plugin, access it through your WordPress admin dashboard at Settings > SNAPCARD.
+## 1. Access the Wordpress Bitcoin Payments plugin through Settings > SNAPCARD.
 ![Step 1](http://bookmarklet.snapcard.io/img/steps/step1.png)
 
-## 2. On the API Keys page, fill the Merchant ID, API Key and Security Key fields with your SNAPCARD Merchant account information. Click Save Changes.
+## 2. Complete your account details.
+Fill the Merchant ID, API Key and Security Key fields with your SNAPCARD Merchant account information. Click "Save Changes".
 ![Step 2](http://bookmarklet.snapcard.io/img/steps/step2.png)
 
 Below are URLS of where you're able to retrieve this information:
@@ -31,11 +32,12 @@ Below are URLS of where you're able to retrieve this information:
 ## 3. Click SNAPCARD Button on the top menu. 
 You're now able to choose a button style and color. Enter the Item Name and Amount for the item you want to sell for digital currency, as well as the enter the Thank You Page URL. 
 
-Then click Create Button.
+Then click "Create Button".
 
 ![Step 3](http://bookmarklet.snapcard.io/img/steps/step3.png)
 
-##4. 
+##4. The SNAPCARD plugin will generate a code for your payment button.
+Select the code and copy. You're able to paste this shortcode anywhere on your WordPress to place the payment button.
 ![Step 4](http://bookmarklet.snapcard.io/img/steps/step4.png)
 
 # SNAPCARD Support 
