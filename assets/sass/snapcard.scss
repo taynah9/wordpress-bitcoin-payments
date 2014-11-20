@@ -1,0 +1,342 @@
+@import "snapcard_var";
+// Snapcard colors
+$snapcard-color1: #1d2629;
+$snapcard-color2: #27b6cb;
+$snapcard-color3: #a3d9eb;
+$snapcard-color4: #70868b;
+$snapcard-color5: #ebf2f4;
+
+// Override bootstrap variables
+$brand-primary:            $snapcard-color2;
+// $brand-success:         #5cb85c !default;
+// $brand-info:            #5bc0de !default;
+// $brand-warning:         #f0ad4e !default;
+// $brand-danger:          #d9534f !default;
+
+$text-color: $snapcard-color4;
+
+$padding-base-vertical: 12px;
+$padding-base-horizontal: 18px;
+
+$input-color: $snapcard-color4;
+$input-border: #b8cacf;
+
+$input-border-focus: #b8cacf;
+
+$input-height-base: 50px;
+
+// Custom Brands Color
+$brand-btc: #f7931a;
+$brand-doge: #Ba9f33;
+$brand-xrp: #377fb0;
+$brand-ltc: #777777;
+
+// Fonts
+$font-family-sans-serif:  "ProximaNova-Light", Helvetica, Arial, sans-serif;
+$font-family-serif:       "Montserrat", Georgia, "Times New Roman", Times, serif;
+//** Default monospace fonts for `<code>`, `<kbd>`, and `<pre>`.
+$font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+$headings-font-weight:    400 !default;
+
+// Border radius
+$border-radius-base:        3px;
+$border-radius-large:       4px;
+$border-radius-small:       2px;
+
+// Panels
+$panel-border-radius:       $border-radius-small; // Default panel border raidus
+// .panel-payment
+$panel-payment-text:          #57b5cd;
+$panel-payment-border:        #a3d9eb;
+$panel-payment-heading-bg:    #a3d9eb;
+
+// Custom Button Properties
+$btn-btc-color:               #fff;
+$btn-btc-bg:                  $brand-btc;
+$btn-btc-border:              $btn-btc-bg;
+
+$btn-doge-color:               #fff;
+$btn-doge-bg:                  $brand-doge;
+$btn-doge-border:              $btn-doge-bg;
+
+$btn-xrp-color:               #fff;
+$btn-xrp-bg:                  $brand-xrp;
+$btn-xrp-border:              $btn-xrp-bg;
+
+$btn-ltc-color:               #fff;
+$btn-ltc-bg:                  $brand-ltc;
+$btn-ltc-border:              $btn-ltc-bg;
+
+$btn-status-color:            #fff;
+$btn-status-bg:               #57b5cd;
+$btn-status-border:           #57b5cd;
+
+@import "proxima";
+@import "bootstrap";
+
+/* Animation
+============= */
+
+// Spinning Icons
+.spinner {
+  -webkit-animation: spinner 2s infinite linear;
+          animation: spinner 2s infinite linear;
+}
+
+@-webkit-keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+@keyframes spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(359deg);
+            transform: rotate(359deg);
+  }
+}
+
+/* Form Control
+================*/
+.form-control {
+    border-width: 2px;
+    &:focus {
+        background: #f4f4f4;
+        @include box-shadow(none);
+    }
+}
+
+/* Dropdown menu
+=================*/
+.dropdown-menu {
+    border-radius: $border-radius-small;
+    @include box-shadow(none);
+}
+
+/* Buttons
+===========*/
+
+// Snapcard dropdown button mixins
+@mixin btn-dropdown-snapcard($btn-color, $btn-bg, $btn-border){
+    @include button-variant($btn-color, $btn-bg, $btn-border);
+    &:hover,
+    &:focus,
+    &:active,
+    &.active,
+    .open > &.dropdown-toggle {
+    color: $btn-color;
+    background-color: $btn-bg;
+        border-color: $btn-border;
+    }
+}
+
+.btn {
+      &,
+    &:active,
+    &.active {
+        &:focus {
+              outline: none;
+        }
+    }
+
+    &:active,
+    &.active {
+        outline: 0;
+        background-image: none;
+        @include box-shadow(none);
+    }
+
+}
+
+.btn-group.open .dropdown-toggle {
+    @include box-shadow(none);
+}
+
+/* snapcard button */
+.btn-btc {
+    @include btn-dropdown-snapcard($btn-btc-color, $btn-btc-bg, $btn-btc-border);
+}
+
+.btn-doge {
+    @include btn-dropdown-snapcard($btn-doge-color, $btn-doge-bg, $btn-doge-border);
+}
+
+.btn-xrp {
+    @include btn-dropdown-snapcard($btn-xrp-color, $btn-xrp-bg, $btn-xrp-border);
+}
+
+.btn-ltc {
+    @include btn-dropdown-snapcard($btn-ltc-color, $btn-ltc-bg, $btn-ltc-border);
+}
+
+.btn-confirm {
+    @include button-variant(#fff, $brand-primary, $brand-primary);
+}
+
+.btn-status {
+    @include btn-dropdown-snapcard($btn-status-color, $btn-status-bg, $btn-status-border);
+}
+
+/* Panels
+==========*/
+/* panel payment */
+.panel-payment {
+  @include panel-variant($panel-payment-border, $panel-payment-text, $panel-payment-heading-bg, $panel-payment-border);
+  border: 0;
+  @include box-shadow(0 1px 3px rgba(0,0,0,0.25));
+  > .panel-heading {
+    padding: 14px 24px;
+    font-size: 24px;
+    .crypto-val {
+        color: #fff;
+        margin-right: 8px;
+    }
+  }
+  > .panel-body {
+    // padding-left: 0;
+    // padding-right: 0;
+  }
+  .qrcode-container {
+    text-align: center;
+    > img {
+        max-width: 100%;
+        min-width: 90px;
+    }
+  }
+  .dropdown {
+    //width: 124px;
+    .dropdown-toggle {
+        .curIcon {
+            float: left;
+            margin-left: -4px;
+            margin-right: 8px;
+        }
+    }
+  }
+  .dropdown-menu {
+    top: -380%;
+    width: 100%;
+    min-width: 124px;
+    cursor: pointer;
+    padding: 0;
+    background-color: #c0d1d5;
+    border-color: #c0d1d5;
+    line-height: 26px;
+    a {
+        padding: 6px 14px;
+        line-height: 26px;
+        .over, .norm {
+            float: left;
+            margin-right: 8px;
+            margin-left: -4px;
+        }
+        .over {
+            display: none;
+        }
+        &:hover {
+            .over {display: inline;}
+            .norm {display: none;}
+        }
+    }
+  }
+  .address-container {
+    margin-top: 10px;
+    color: $snapcard-color4;
+    border: 2px solid $snapcard-color5;
+    border-radius: $border-radius-base;
+    margin-bottom: 20px;
+    .address-link {
+        color: $snapcard-color1;
+        width: 100%;
+        text-align: center;
+        display: block;
+        margin: 16px 0;
+        font-family: $font-family-monospace;
+        font-size: 12px;
+    }
+    .currency-address-copy-tooltip {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 70px;
+        height: 30px;
+    }
+    .copy-to-clipboard-overlay {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+    }
+    .copy-img {
+        margin-top: 13px;
+        width: 20px;
+    }
+  }
+  .logo.spinner { height: 20px;}
+  #currency-toggle > .dropdown-toggle,
+  .status-button {
+    padding: 6px 14px;
+    height: 40px;
+  }
+}
+
+/* Checkout Page
+=================*/
+#checkout {
+    .checkout-header {
+        background: $snapcard-color1;
+        .logo {padding: 20px;}
+    }
+    .checkout-body {
+        .border-bottom {
+            border-bottom: 2px solid $snapcard-color1;
+            @extend .row;
+            margin-left:0;
+            margin-right: 0;
+        }
+        h2 {
+            color: $brand-primary;
+        }
+        button.cancel,
+        button.submit {
+            margin: 0 5px;
+        }
+        .payment-iframe {
+            border: none;
+            @include box-shadow(0 1px 15px rgba(0,0,0,0.25));
+        }
+    }
+    .shipping-address {
+        .loading {
+            position: absolute;
+            background-color: #fff;
+            opacity: 0.85;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            > .logo {
+                margin-top: -15px;
+                left: 50%;
+                top: 50%;
+                position: absolute;
+                margin-left: -15px;
+            }
+        }
+        input {
+          height: 45px;
+        }
+    }
+}

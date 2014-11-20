@@ -1,0 +1,12 @@
+{
+  "name": "snapcard",
+  "version": "0.0.0",
+  "dependencies": {
+    "fontawesome": "~4.2.0",
+    "select2": "~3.5.1",
+    "jquery.qrcode": "~0.11.0",
+    "bootstrap-sass-official": "~3.2.0+2",
+    "zeroclipboard": "~2.1.6",
+    "magnific-popup": "~0.9.9"
+  }
+}
