@@ -5,6 +5,10 @@ wordpress-bitcoin-payments
 
 With the SNAPCARD WordPress Bitcoin payments button, users can accept payments in bitcoin and other digital currencies with the click of a button. Users are able to create custom payment buttons in four styles and receive payouts in USD, digital currencies, or a mixture of both.
 
+Requires at least: 3.5.1
+Tested up to: 3.6
+Stable tag: 1.0.0
+
 
 # Installation from WordPress
 
