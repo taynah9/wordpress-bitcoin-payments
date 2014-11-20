@@ -30,8 +30,13 @@ We'd love to make this better for the community! Please fork and submit a pull r
 
 # License
 
-// enter license here.
+GNU GENERAL PUBLIC LICENSE
+
+Version 2, June 1991
+
+Copyright (C) 1989, 1991 Free Software Foundation, Inc., <http://fsf.org/>
+51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA
+Everyone is permitted to copy and distribute verbatim copies
+of this license document, but changing it is not allowed.
 
 Copyright (c) 2013-2014 SNAPCARD Inc.
-
-// enter more information about license here.
